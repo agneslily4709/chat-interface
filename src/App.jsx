@@ -1,16 +1,17 @@
 import { Box, ThemeProvider } from "@mui/material";
 import Navbar from "./Components/Navbar";
 import theme from "./Styles/theme";
-import styles from "./Styles/styles";
+import { windowStyles } from "./Styles/styles";
+import ChatContainer from "./Components/ChatContainer";
 
 const App = ()  => {
   return (
         <>
         <ThemeProvider theme={theme}>
-        <Box sx={styles.window}>
-        <Navbar/>
-        {/* <h1>Welcome to the world of React</h1> */}
-        </Box>
+                <Box sx={windowStyles.window}>
+                        <Navbar/>
+                        <ChatContainer/>
+                </Box>
         </ThemeProvider>
         </>
   );
