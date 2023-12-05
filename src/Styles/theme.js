@@ -1,18 +1,18 @@
-// import { green, purple } from "./colors";
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
         palette: {
           background: {
-            default: "#050505", // Background Color
-            chatInterface: "#181818", // Chat Interface Background
-            chatHeader: "#2f2f2f", // Chat Header Background
-          },
-          primary: {
-            main: "#f3ae9f", // Contrast Color (Button Background and Texts)
+            default: "#050505", 
+            main: "#181818", 
+            sub: "#2f2f2f",
+            contrast:"#F3AE9F"
           },
           text: {
-            primary: "#ffffff", // Texts and Icons Color
+            black: "#050505", 
+            white:"#b9b9b9",
+            contrast:"#F3AE9F",
+            grey:"#7F8781"
           },
         },
       });
