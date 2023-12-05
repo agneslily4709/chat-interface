@@ -1,21 +1,23 @@
-import { Box, ThemeProvider } from "@mui/material";
-import Navbar from "./Components/Navbar";
-import theme from "./Styles/theme";
-import { windowStyles } from "./Styles/styles";
-import ChatContainer from "./Components/ChatContainer";
-import BottomBar from "./Components/BottomBar"
-const App = ()  => {
+import React from 'react';
+import { Box, ThemeProvider } from '@mui/material';
+import Navbar from './Components/Navbar';
+import ChatContainer from './Components/ChatContainer';
+import BottomBar from './Components/BottomBar';
+import theme from './Styles/theme';
+import { windowStyles } from './Styles/styles';
+
+const App = () => {
   return (
-        <>
-        <ThemeProvider theme={theme}>
+    <>
+      <ThemeProvider theme={theme}>
         <Box sx={windowStyles.window}>
-        <Navbar/>
-        <ChatContainer/>
-        <BottomBar/>
+          <Navbar />
+          <ChatContainer />
+          <BottomBar />
         </Box>
-        </ThemeProvider>
-        </>
+      </ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;

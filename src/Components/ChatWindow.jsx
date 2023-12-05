@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import {chatContainerStyles} from '../Styles/styles'
 import {Grid, TextField, List,ListItem, ListItemText, Box, Toolbar, Button, IconButton, Typography, Paper, Avatar} from "@mui/material"
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
-
+import { getImagePath } from '../Utils/Utils';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import DeleteIcon from '@mui/icons-material/Delete';
 
@@ -22,9 +22,7 @@ const ChatWindow = ({chatDetails,setChatDetails}) => {
                   setMessage('');
                 }
               };
-        const getImagePath = (avatar) => {
-                return require(`../Imgs/${avatar}`);
-        }
+
   return (
         <Box sx={{...chatContainerStyles.main}}>
 <Box sx={chatContainerStyles.chatWindow.main}>
