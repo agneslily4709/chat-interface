@@ -16,29 +16,45 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import { navbarStyles } from '../Styles/styles';
 import theme from '../Styles/theme';
+
 const getImagePath = (avatar) => {
-        return require(`../Imgs/${avatar}`);
-}
+  return require(`../Imgs/${avatar}`);
+};
+
 const navItems = [
   {
     navItemName: 'Explore',
-    iconName: <Avatar src={getImagePath("Icons/icons 1.png")} sx={{width: "31.3px",p:1, height: "32px", mr: 1}}/>,
-    color: theme.palette.text.contrast
+    iconName: (
+      <Avatar
+        src={getImagePath('Icons/icons 1.png')}
+        sx={{ width: '31.3px', p: 1, height: '32px', mr: 1 }}
+      />
+    ),
+    color: theme.palette.text.contrast,
   },
   {
     navItemName: 'Create',
-    iconName:<Avatar src={getImagePath("Icons/icons 2.png")} sx={{width: "31.3px",p:1, height: "32px", mr: 1}}/>,
+    iconName: (
+      <Avatar
+        src={getImagePath('Icons/icons 2.png')}
+        sx={{ width: '31.3px', p: 1, height: '32px', mr: 1 }}
+      />
+    ),
     color: theme.palette.text.white,
   },
   {
     navItemName: 'Edit',
-    iconName: <Avatar src={getImagePath("Icons/icons 3.png")} sx={{width: "31.3px",p:1, height: "32px", mr: 1}}/>,
+    iconName: (
+      <Avatar
+        src={getImagePath('Icons/icons 3.png')}
+        sx={{ width: '31.3px', p: 1, height: '32px', mr: 1 }}
+      />
+    ),
     color: theme.palette.text.white,
   },
 ];
 
 function Navbar() {
-
   const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => setAnchorElNav(event.currentTarget);
@@ -59,26 +75,46 @@ function Navbar() {
             >
               <MenuIcon />
             </IconButton>
-            <Menu anchorEl={anchorElNav} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'left' }} open={Boolean(anchorElNav)} onClose={handleCloseNavMenu} sx={{ display: { xs: 'block', md: 'none' },p:0 }} MenuListProps={{ sx: { py: 0 } }}>
+            <Menu
+              anchorEl={anchorElNav}
+              anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+              keepMounted
+              transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{ display: { xs: 'block', md: 'none' }, p: 0 }}
+              MenuListProps={{ sx: { py: 0 } }}
+            >
               {navItems.map((navItem, idx) => (
                 <MenuItem dense={true} key={idx} onClick={handleCloseNavMenu} sx={navbarStyles.navbarDropdown}>
-                <Typography textAlign="center" variant='p' gutterBottom>{navItem.iconName}{navItem.navItemName}</Typography>
+                  <Typography textAlign="center" variant="p" gutterBottom>
+                    {navItem.iconName}
+                    {navItem.navItemName}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <Typography component="a" href="/" sx={navbarStyles.navbarBrand}> Logo</Typography>
+          <Typography component="a" href="/" sx={navbarStyles.navbarBrand}>
+            Logo
+          </Typography>
           <Divider orientation="vertical" variant="middle" sx={navbarStyles.brandDivider}></Divider>
           <Box sx={navbarStyles.navOptions}>
             {navItems.map((navItem, idx) => (
-              <Button key={idx} onClick={handleCloseNavMenu} sx={{ color: navItem.color, textTransform: 'capitalize' }}>
+              <Button
+                key={idx}
+                onClick={handleCloseNavMenu}
+                sx={{ color: navItem.color, textTransform: 'capitalize' }}
+              >
                 {navItem.iconName} {navItem.navItemName}
               </Button>
             ))}
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <Button sx={navbarStyles.loginButton} variant="contained">Login</Button>
+              <Button sx={navbarStyles.loginButton} variant="contained">
+                Login
+              </Button>
             </Tooltip>
           </Box>
         </Toolbar>
