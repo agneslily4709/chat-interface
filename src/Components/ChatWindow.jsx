@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {chatContainerStyles} from '../Styles/styles'
 import {Grid, TextField, List,ListItem, ListItemText, Box, Toolbar, Button, IconButton, Typography, Paper, Avatar} from "@mui/material"
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
@@ -8,6 +8,20 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 
 const ChatWindow = ({chatDetails,setChatDetails}) => {
+        
+        const [message, setMessage] = useState('');
+        const handleInputChange = (event) => {
+                setMessage(event.target.value);
+        };
+        const handleSendMessage = () => {
+                if (message.trim() !== '') {
+                  const newMessage = {sender:"You",message:message}
+                        setChatDetails((prevData) => {
+                                return {...chatDetails, messages: [...prevData.messages,newMessage]}
+                        })
+                  setMessage('');
+                }
+              };
         const getImagePath = (avatar) => {
                 return require(`../Imgs/${avatar}`);
         }
@@ -29,7 +43,7 @@ const ChatWindow = ({chatDetails,setChatDetails}) => {
                        </Box>
                 </Toolbar>
                 <Box display="flex" flexDirection="column" gap={2}>
-                        <List>
+                        <List style={{overflow: 'auto'}}>
                         {chatDetails.messages && chatDetails.messages.map((chatDetail,idx) => (
                     <ListItem key={idx}>
                     <Grid container> 
@@ -59,8 +73,8 @@ const ChatWindow = ({chatDetails,setChatDetails}) => {
                 }
   </Paper>
   <Paper sx={chatContainerStyles.chatWindow.chatInput}>
-  <TextField sx={chatContainerStyles.chatWindow.chatTextField} id="outlined-basic-email" placeholder="Message" fullWidth />
-  <Button variant='contained' sx={ chatContainerStyles.chatWindow.chatSendButton }><TelegramIcon sx={chatContainerStyles.chatWindow.chatSendIcon}/></Button>
+  <TextField sx={chatContainerStyles.chatWindow.chatTextField} inputProps={{style: { padding: 5 }}} id="outlined-basic-email" placeholder="Message" fullWidth value={message} onChange={handleInputChange}/>
+  <Button variant='contained' sx={ chatContainerStyles.chatWindow.chatSendButton }><TelegramIcon sx={chatContainerStyles.chatWindow.chatSendIcon} onClick={handleSendMessage}/></Button>
   </Paper>
 </Box>
         </Box>

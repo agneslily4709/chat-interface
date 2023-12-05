@@ -47,8 +47,8 @@ const navbarStyles = {
   },
   loginButton: {
     width: "175px",
-    height: "30px",
-    padding: "15px 40px 20px 40px",
+    height: "36px",
+    padding: "5px 40px 5px 40px",
     borderRadius: "200px",
     fontFamily: "Open Sans",
     fontSize: "15px",
@@ -58,7 +58,8 @@ const navbarStyles = {
     textTransform: 'capitalize',
     [`@media (max-width: ${theme.breakpoints.values.md}px)`]: {
       width: '91px',
-      padding: '15px 20px 20px 20px',
+      height:"auto",
+      padding: '2px 10px 10px 10px',
     },
     '&:hover': {
         cursor:"pointer",
@@ -157,13 +158,14 @@ const chatContainerStyles = {
                 },
                 chatInput:{    
                         gridColumn: '1', 
-                        gridRow: '12/13',
+                        gridRow: '13/14',
                         padding:0,
                         display:"flex",
                         background:"inherit",
                         flexDirection:"row",
                         gap:"1rem",
-                        margin:"0px 0px 0px 0px"
+                        margin:"0px 0px 0px 0px",
+                        mx:"5px"
                 },
                 chatDialogs:{
                         color:"black",
@@ -180,7 +182,7 @@ const chatContainerStyles = {
                 },
                 chatDisplay:{
                         gridColumn: '1',
-                        gridRow: 'span 11' ,
+                        gridRow: 'span 12' ,
                         p:0,
                         backgroundColor:theme.palette.background.main,
                         color:theme.palette.text.white
