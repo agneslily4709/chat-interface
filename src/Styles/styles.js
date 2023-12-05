@@ -92,8 +92,8 @@ const chatContainerStyles = {
         },
         usersList:{
                 usersListDivider: {
-                // backgroundColor: theme.palette.background.chatDivider,
-                borderRightWidth: 2,
+                backgroundColor: theme.palette.background.sub,
+                borderWidth: 1,
                 display: { xs: 'none', md: 'block' },
                 },
                 userCard:{
