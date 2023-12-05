@@ -15,8 +15,8 @@ This project is a front-end implementation of a chat interface based on a Figma 
 
 ## 🖼️ Website Preview
 
-For detailed images showcasing the website output, please refer to [documentation.md](./documentation.md).
-For detailed short video showcasing the website usage, please refer to [demo.md](./demo.md).
+* For detailed images showcasing the website output, please refer to [documentation.md](./documentation.md).
+* For detailed short video showcasing the website usage, please refer to [demo.md](./demo.md).
 
 ## 🌿 Branches
 
@@ -45,4 +45,4 @@ For detailed short video showcasing the website usage, please refer to [demo.md]
 ## 🌐 Deployed URLs
 
 - **Deployment:** [https://chat-interface-agneslily.netlify.app/](https://chat-interface-agneslily.netlify.app/)
--**Figma Design:**[https://www.figma.com/file/xmrJ2n2h0MzXVNlWQqqAZ0/Chat-Interface-(FSD-Task)?type=design&node-id=0-1&mode=design](https://www.figma.com/file/xmrJ2n2h0MzXVNlWQqqAZ0/Chat-Interface-(FSD-Task)?type=design&node-id=0-1&mode=design)
+- **Figma Design:**[https://www.figma.com/file/xmrJ2n2h0MzXVNlWQqqAZ0/Chat-Interface-(FSD-Task)?type=design&node-id=0-1&mode=design](https://www.figma.com/file/xmrJ2n2h0MzXVNlWQqqAZ0/Chat-Interface-(FSD-Task)?type=design&node-id=0-1&mode=design)
