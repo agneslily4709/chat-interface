@@ -76,5 +76,152 @@ const navbarStyles = {
   },
 };
 
+const chatContainerStyles = {
+        main:{
+                height: "80vh",
+                backgroundColor: theme.palette.background.main,
+                borderRadius: "10px",
+                color: theme.palette.text.white,
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+                box1: {
+                        padding: "20px",
+                      },
+        },
+        usersList:{
+                usersListDivider: {
+                // backgroundColor: theme.palette.background.chatDivider,
+                borderRightWidth: 2,
+                display: { xs: 'none', md: 'block' },
+                },
+                userCard:{
+                        height:"55px",
+                        borderRadius:"150px",
+                        background:"inherit",
+                        p:"5px",
+                        '&:hover': {
+                                cursor:"pointer",
+                                backgroundColor:theme.palette.background.sub,
+                            },
+                },
+                userCardContent:{
+                        color:theme.palette.text.white,
+                        fontSize:"16px",
+                        padding:0,
+                        '&:last-child':{
+                                padding:0
+                        }
+                },
+                chatOnButton:{
+                        textTransform:"capitalize",
+                        width:"100%",
+                        borderRadius:"10px", 
+                        backgroundColor:theme.palette.background.contrast,
+                        color:theme.palette.text.black,
+                        padding:"5px" ,
+                        '&:hover': {
+                                cursor:"pointer",
+                                backgroundColor:theme.palette.background.contrast,
+                            },
+                        },
+                        userListBox:{
+                        display:"flex", 
+                        flexDirection:"column", 
+                        gap:2
+                        },
+                        createNewBotButton:{
+                                textTransform:"capitalize",
+                                borderRadius:"10px", 
+                                padding:"5px",
+                                justifyContent: "flex-start",
+                                color:theme.palette.text.white,
+                        },
+                        createNewBotIcon:{
+                                fontSize:50,
+                                color:theme.palette.text.contrast
+                        }
+        },
+        chatWindow:{
+                default:{
+                        display:"flex",
+                        justifyContent:"center",
+                        alignItems:"center",
+                        height:"50vh",
+                        color:theme.palette.text.grey
+                },
+                main:{
+                        display: 'grid',  
+                        gridAutoRows: "1fr",  
+                        gap: 1
+                },
+                chatInput:{    
+                        gridColumn: '1', 
+                        gridRow: '12/13',
+                        padding:0,
+                        display:"flex",
+                        background:"inherit",
+                        flexDirection:"row",
+                        gap:"1rem",
+                        margin:"0px 0px 0px 0px"
+                },
+                chatDialogs:{
+                        color:"black",
+                        padding:"10px"
+                },
+                chatTextField:{
+                        backgroundColor:theme.palette.background.sub,
+                        px:"5px",
+                        border:"none",
+                        borderRadius:"70px",
+                        height:"auto",
+                        "& fieldset": { border: 'none' },
+                        input:{color:theme.palette.text.white}
+                },
+                chatDisplay:{
+                        gridColumn: '1',
+                        gridRow: 'span 11' ,
+                        p:0,
+                        backgroundColor:theme.palette.background.main,
+                        color:theme.palette.text.white
+                },
+                chatHeader:{
+                        height:"20px",
+                        backgroundColor:theme.palette.background.sub,
+                        fontSize:"12px",
+                        display:"flex",
+                        justifyContent:"space-between"
+                },
+                chatSendButton:{
+                        backgroundColor:theme.palette.background.contrast,
+                        borderRadius:"20px",
+                        '&:hover': {
+                                cursor:"pointer",
+                                backgroundColor:theme.palette.background.contrast,
+                            },
+                },
+                chatSendIcon:{
+                        color: theme.palette.text.black,
+                },
+                chatType:{
+                        all:{
+                        },
+                        send:{
+                                ml:"50%",
+                                backgroundColor:theme.palette.background.contrast,
+                                borderRadius:"15px 15px 0px 15px",
+                                padding:"10px",
+                                color:theme.palette.text.black,
+                        },
+                        recive:{
+                                mr:"50%",
+                                backgroundColor:theme.palette.background.sub,
+                                padding:"10px",
+                                borderRadius:"15px 15px 15px 0px",
+                                color:theme.palette.text.white,
+                        }
+                }
+        }
+  }
 
-export { windowStyles, navbarStyles };
+export { windowStyles, navbarStyles, chatContainerStyles };
