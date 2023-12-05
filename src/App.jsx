@@ -8,10 +8,10 @@ const App = ()  => {
   return (
         <>
         <ThemeProvider theme={theme}>
-                <Box sx={windowStyles.window}>
-                        <Navbar/>
-                        <ChatContainer/>
-                </Box>
+        <Box sx={windowStyles.window}>
+        <Navbar/>
+        <ChatContainer/>
+        </Box>
         </ThemeProvider>
         </>
   );
