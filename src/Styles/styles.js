@@ -223,5 +223,44 @@ const chatContainerStyles = {
                 }
         }
   }
+  const bottomBarStyles = {
+        default:{
+                display:"flex",
+                justifyContent:"space-between",
+                backgroundColor:theme.palette.background.default,
+                color:theme.palette.text.white,
+                alignItems:"center"
+        },
+        socialIcons:{
+                display:"flex",
+        },
+        socials:{
+                display:"flex",
+                flexDirection:"row",
+                alignItems:"center",
+                [`@media (max-width: ${theme.breakpoints.values.md}px)`]: {
+                        display: { xs: 'flex', md: 'none' },
+                        flexDirection:"col",
+                        fontSize:"10px"
+                },
+        },
+        bottomBarBrand:{
+                mr: 2,
+                fontSize: "20px",
+                fontWeight: 700,
+                textAlign: "left",
+                textDecoration: 'none',
+                color: theme.palette.text.contrast,
+                display: { md: 'flex', xs: 'none' },
+                [`@media (max-width: ${theme.breakpoints.values.md}px)`]: {
+                        display: { xs: 'flex', md: 'none' },
+                        flexGrow: 1,
+                },
+        },
+        bottomBarDropdown: {
+                color: "black",
+                display: { xs: 'block', md: 'none' },
+              },
+  }
 
-export { windowStyles, navbarStyles, chatContainerStyles };
+export { windowStyles, navbarStyles, chatContainerStyles, bottomBarStyles };
